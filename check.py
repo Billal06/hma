@@ -23,7 +23,7 @@ def check(key, jml):
 	url = "https://my.hidemyass.com/LicenseController/activateLicense"
 	r = requests.post(url, data=data, headers=headers, cookies=cookies)
 	j = json.loads(r.text)
-	print (j)
+#	print (j)
 	errorData = j["errorData"][0]
 	if errorData["errorCode"] != 400:
 		print ("Success -> "+str(key))
